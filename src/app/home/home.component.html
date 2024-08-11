@@ -1,0 +1,64 @@
+<div class="home-container">
+  <div class="hero-image" style="background-image: url('banner.jpg');">
+    <div class="hero-text">
+      <h1>CYBER SECURITY IS NOT OPTIONAL</h1>
+      <p>Cyber attacks can cause on average $1.5 billion to a company, with our advanced AI system we can block the attack before it happens.</p>
+      <button class="btn btn-primary">DISCOVER MORE</button>
+    </div>
+  </div>
+</div>
+
+<div class="what-we-do">
+  <h2>What we do</h2>
+  <div class="service-grid">
+    <div class="service-card" *ngFor="let service of services">
+      <div class="service-content">
+        <h3>{{ service.title }}</h3>
+        <p class="service-description">{{ service.description }}</p>
+        <a href="#" class="learn-more">Learn More &rarr;</a>
+      </div>
+      <div class="service-image">
+        <img [src]="service.image" alt="{{ service.title }}">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="director-message">
+  <div class="message-container">
+    <div class="message-image">
+      <img src="director.png" alt="Director Image">
+    </div>
+    <div class="message-text">
+      <div class="quote-icon">
+        <span>&#8220;</span>
+      </div>
+      <h2>Message from the Director</h2>
+      <p class="quote">In today’s digital landscape, proactive cybersecurity is paramount. By fostering partnerships, we achieve a common goal: Safeguarding digital assets at all times.</p>
+      <p>Let’s unite, innovate, and stay vigilant together!</p>
+      <div class="director-info">
+        <strong>Mr. Tshepo Kome</strong>
+        <p>MSc Computer Information Systems | PhD Candidate | FCA | Security + | GIAC Certified Incident Handler | Scrum SFC | Scrum Six Sigma | ISC2 Certified in Cybersecurity</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <div class="cta-container">
+    <h2>Ready to Protect Your Digital Assets?</h2>
+    <p>Join the hundreds of companies that trust our advanced cybersecurity solutions to stay safe from cyber threats.</p>
+    <button class="cta-button">Get Started Now</button>
+  </div>
+</div>
+
+<div class="experience-section">
+  <h2>Our experience</h2>
+  <div class="experience-grid">
+    <div class="experience-card" *ngFor="let item of experienceItems">
+      <div [id]="item.id" class="experience-number">{{ item.count }}</div>
+      <div class="experience-description">{{ item.description }}</div>
+    </div>
+  </div>
+</div>
+

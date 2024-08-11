@@ -1,0 +1,26 @@
+<div class="services-intro-container">
+  <div class="services-header">
+    <h1>Our Services</h1>
+    <p>We provide a comprehensive suite of cybersecurity services tailored to protect and optimize your digital environment.</p>
+  </div>
+</div>
+
+<div class="services-container">
+  <div class="services-menu">
+    <ul>
+      <li *ngFor="let service of services" (click)="selectService(service.id)" [class.selected]="service.id === selectedService">
+        <img [src]="service.icon" alt="{{service.name}} Icon">
+        <span>{{service.name}}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="service-details">
+    <div *ngFor="let detail of details[selectedService]">
+      <h3>{{detail.title}}</h3>
+      <p>{{detail.description}}</p>
+      <a [routerLink]="['/' + detail.link]" routerLinkActive="active">Learn More</a>
+      <hr>
+    </div>
+  </div>
+
+</div>
