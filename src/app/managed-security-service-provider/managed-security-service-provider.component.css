@@ -3,8 +3,10 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+
   color: #333;
 }
+
 
 /* Service Header */
 .service-header {
@@ -62,6 +64,7 @@ body {
   border-radius: 10px;
   text-align: center;
   animation: fadeInUp 1s ease-in-out;
+  width: 90%;
 }
 
 .service-section h2 {
@@ -126,8 +129,9 @@ body {
 
 /* Included Items */
 .whats-included {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  width: 100%;
+  margin: 0 auto;
+  /* margin-left: calc(-50vw + 50%); */
   background-color: #F7F7F7;
   color: white;
   padding: 20px 0; /* Adjust the padding */

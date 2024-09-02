@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ScrollServiceService } from '../scroll-service.service';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-about',
@@ -8,5 +10,9 @@ import { Component } from '@angular/core';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
+  constructor(private viewportScroller: ViewportScroller) {}
 
+  ngOnInit(): void {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
 }

@@ -9,6 +9,10 @@
   position: relative;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .careers-container::after {
   content: "";
   position: absolute;

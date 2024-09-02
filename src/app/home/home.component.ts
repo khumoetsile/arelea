@@ -1,15 +1,22 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 import { CountUpModule  } from 'ngx-countup';
+import { LogoSliderComponent } from "../logo-slider/logo-slider.component";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, CountUpModule],
+  imports: [CommonModule, RouterModule, CountUpModule, LogoSliderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  constructor(private viewportScroller: ViewportScroller) {}
+
+  ngOnInit(): void {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
   experienceItems = [
     { id: 'count1', count: 5, description: 'Years Experience in Cybersecurity' },
     { id: 'count2', count: 300, description: 'Clients Trust Us' },

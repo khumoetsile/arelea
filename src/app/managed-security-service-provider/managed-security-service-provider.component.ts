@@ -1,13 +1,20 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-managed-security-service-provider',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './managed-security-service-provider.component.html',
   styleUrl: './managed-security-service-provider.component.css'
 })
 export class ManagedSecurityServiceProviderComponent {
+  constructor(private viewportScroller: ViewportScroller) {}
+
+  ngOnInit(): void {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
   areas = [
     'Application Protection',
     'Channel Protection',

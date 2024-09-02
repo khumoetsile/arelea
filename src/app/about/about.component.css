@@ -11,6 +11,8 @@
   border-radius: 0px;
 }
 
+vvv
+
 .about-container::after {
   content: "";
   position: absolute;

@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #1c1c1c;
+  color: #db4f54;
+}
+
+/* Container for User Awareness Sections */
+.user-awareness-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.section-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.section-text h2 {
+  font-size: 2rem;
+}
+
+.section-text p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.section-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover; /* Ensures that images maintain their aspect ratio */
+}
+
+/* Styles for alternating sections */
+.section-left .section-content {
+  flex-direction: row;
+}
+
+.section-right .section-content {
+  flex-direction: row-reverse;
+}
+
+/* Clients Section */
+.section-clients {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #db4f54;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .section-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-text {
+    padding: 20px 0;
+  }
+
+  .section-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .section-left .section-content,
+  .section-right .section-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-text p {
+    font-size: 0.9rem;
+  }
+
+  .section-image img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .section {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .section-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .section-text p {
+    font-size: 0.8rem;
+  }
+
+  .section {
+    padding: 20px 5px;
+  }
+
+  .section-image img {
+    width: 100%;
+    height: auto;
+  }
+}
